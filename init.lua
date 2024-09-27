@@ -1,7 +1,7 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
 vim.g.mapleader = " "
 
-vim.cmd('soruce ~/.config/nvim/ftdetect/mlir.vim')
+vim.cmd('source ~/.config/nvim/ftdetect/mlir.vim')
 vim.cmd('source ~/.config/nvim/ftdetect/llvm.vim')
 vim.cmd('source ~/.config/nvim/ftdetect/llvm-lit.vim')
 vim.cmd('source ~/.config/nvim/ftdetect/tablegen.vim')
