@@ -22,3 +22,16 @@ end
 --   on_init = nvlsp.on_init,
 --   capabilities = nvlsp.capabilities,
 -- }
+--
+
+lspconfig.mlir_lsp_server.setup {
+  on_attach = nvlsp.on_attach,
+  capabilities = vim.lsp.protocol.make_client_capabilities(),
+  cmd = {"/scratch/projects/triton/build/bin/triton-lsp"},
+  filetypes = {"mlir", "td"},
+  single_file_support = {true},
+  root_dir = function(fname)
+      return lspconfig.util.find_git_ancestor(fname) or vim.fn.getcwd()
+  end,
+}
+
