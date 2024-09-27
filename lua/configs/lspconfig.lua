@@ -27,7 +27,7 @@ end
 lspconfig.mlir_lsp_server.setup {
   on_attach = nvlsp.on_attach,
   capabilities = vim.lsp.protocol.make_client_capabilities(),
-  cmd = {"/scratch/projects/triton/build/bin/triton-lsp"},
+  cmd = {"./build/bin/triton-lsp"},
   filetypes = {"mlir"},
   single_file_support = {true},
   root_dir = function(fname)
@@ -40,7 +40,7 @@ lspconfig.mlir_lsp_server.setup {
 lspconfig.tblgen_lsp_server.setup {
   on_attach = nvlsp.on_attach,
   capabilities = vim.lsp.protocol.make_client_capabilities(),
-  cmd = {"/scratch/triton-home/.triton/llvm/llvm-36adf8ec-ubuntu-x64/bin/tblgen-lsp-server", "--tablegen-compilation-database=/scratch/projects/triton/build/tablegen_compile_commands.yml"},
+  cmd = {"/scratch/triton-home/.triton/llvm/llvm-36adf8ec-ubuntu-x64/bin/tblgen-lsp-server", "--tablegen-compilation-database=./build/tablegen_compile_commands.yml"},
   filetypes = {"tablegen"},
   single_file_support = {true},
   root_dir = function(fname)
