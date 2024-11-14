@@ -5,7 +5,7 @@ vim.cmd('source ~/.config/nvim/ftdetect/mlir.vim')
 vim.cmd('source ~/.config/nvim/ftdetect/llvm.vim')
 vim.cmd('source ~/.config/nvim/ftdetect/llvm-lit.vim')
 vim.cmd('source ~/.config/nvim/ftdetect/tablegen.vim')
-
+vim.cmd('source ~/.config/nvim/ftdetect/cuda.vim')
 
 vim.cmd('source ~/.config/nvim/syntax/mlir.vim')
 vim.cmd('source ~/.config/nvim/syntax/llvm.vim')
