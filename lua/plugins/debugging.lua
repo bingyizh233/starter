@@ -51,6 +51,7 @@ return {
         cwd = '${workspaceFolder}'
       },
     }
+    dap.configurations.cpp = dap.configurations.c
     
     dap.listeners.before.attach.dapui_config = function()
       dapui.open()
