@@ -6,6 +6,14 @@ return {
   config = function()
     
     local dap, dapui = require("dap"), require("dapui")
+    require("dapui").setup()
+    require("gdb").setup()
+
+    dap.adapters.gdb = {
+      type = "executable",
+      command = "gdb",
+      args = { "--interpreter=dap", "--eval-command", "set print pretty on" }
+    }
     
     dap.listeners.before.attach.dapui_config = function()
       dapui.open()
